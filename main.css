@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Indie Flower', cursive;
+}
+body{
+  background:linear-gradient(to right,#333,#343);
+}
+
+
+@keyframes animate {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
+
+.wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1fr 1fr  1fr 1fr;
+grid-gap: 1%;
+grid-row-gap: 10%;
+max-width:100%;
+max-height:100px;
+}
+.main{
+    grid-column:2/8;
+    grid-row:4/4;
+    background:turquoise;
+    padding:10%;
+  
+    justify-items: center;
+    border:5px solid #444;
+  
+}
+.main2{
+  grid-column:2/8;
+  grid-row:5/5;
+  background:turquoise;
+  padding:10%;
+  justify-items: center;
+  border:5px solid #444;
+}
+
+.header{
+    grid-column:1/-1;
+    grid-row:1/1;
+    background:none;
+    font-size: 30px;
+    justify-items: center;
+    align-items: center;
+
+    padding:0% 0%;
+    border-radius: 1%;
+
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    animation: animate 8s linear infinite;
+    background-size: 400%;
+    text-align: center;
+    line-height: 100px;
+
+
+    
+}
+.headerText:hover{
+  animation: animate 8s linear infinite;
+}
+.headerText{
+  color: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  animation: animate 8s linear infinite;
+  background-size: 400%;
+  text-align: center;
+  line-height: 100px;
+}
+.footer{
+    
+    grid-column:1/-1;
+    grid-row:-1/-1;
+    background-color:white;
+    color:black;
+    font-size:10px;
+    
+
+    
+}
+.footer > *{font-family:Arial, Helvetica, sans-serif;}
+
+
+.Social{
+  display:grid;
+  position: relative;
+  grid-template-columns: 1fr  ;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10%;
+  align-content: start;
+  margin-left:-10%;
+}
+.Vid{
+  grid-column: 2/3;
+  grid-row: 1/1;
+
+}
+.socialMedia{
+  float:left;
+  background:none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  justify-self: start;
+  align-self: start;
+
+  grid-column: 1/1;
+  grid-row: 1/1;
+
+}
+
+.fa{
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:25%;
+  transform: rotate(0);
+  transition:1s;
+}
+.fa:hover{
+  transform: rotate(360deg);
+  opacity:0.8;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-steam {
+  background: white;
+  color: black;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.SlideShow{
+    grid-column:1/-1;
+    grid-row:2/3;
+    position: relative;
+    background: #666;
+    width:99vw;
+    height:79vh;
+ 
+
+   
+}
+
+.dots{
+  grid-area: D;
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%)
+}
+.mySlides {
+  display:none;
+  margin-left: auto;
+  margin-right: auto;
+  max-height:50vh;
+  max-width:100vw;
+  background:#333;
+
+}
+img{
+  max-height:75vh;
+  max-width:100%;
+}
+
+
+
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:limegreen;
+  font-size: 12px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index:3;
+}
+
+.active, .dot:hover {
+  background-color: limegreen;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} 
+
+
+
+@media screen and (max-width:800px){
+
+
+  .Vid{
+    justify-self: center;
+    grid-row: 2/2;
+    
+  
+  }
+iframe{
+  width:99%;
+}
+.socialMedia{
+        grid-column: 2/3;
+        grid-row: 1/1;
+        flex-direction: row;
+        flex-flow: row;
+        background: none;
+        justify-self: center;
+
+}
+
+.fa{
+  padding: 10px;
+  font-size: 15px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 1px;
+}
+
+.Social{
+
+  align-content: center;
+  grid-template-rows: 1fr 400px 1fr;
+  justify-content: center;
+
+}
+
+
+.main{
+  padding:0%;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+body{
+  background: #333;
+
+}
+.footer{font-size:16px;}
+}
