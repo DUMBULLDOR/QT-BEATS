@@ -1,0 +1,17 @@
+@media screen and (max-width:800){
+
+
+    .Vid{
+      grid-column: 2/3;
+      grid-row: 1/1;
+    
+    }
+  
+  .socialMedia{
+          grid-column: 2/3;
+          grid-row: 1/1;
+          flex-direction: column;
+  
+  }
+  
+  }
