@@ -27,18 +27,5 @@ function showSlides() {
   
 }
  
-/* function permission() {
-var c = prompt("Due to The Explicit Content Viewer Discretion is Advised,Enter 'OK' to continue");
-
-if (c == "OK"|| c =="ok" || c =="Ok" || c =="oK") {
-  
-  console.log("Thank you :D");
-
-  
-} else {
-  window.location = "https://www.google.com/";
-}
-}
-permission(); */
 
 };

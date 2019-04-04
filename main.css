@@ -75,6 +75,11 @@ max-height:100px;
     font-size:10px;
     
 
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    animation: animate 8s linear infinite;
+    background-size: 400%;
+    text-align: center;
+  
     
 }
 .footer > *{font-family:Arial, Helvetica, sans-serif;}
